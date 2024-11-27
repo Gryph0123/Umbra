@@ -50,7 +50,7 @@ public class Controller : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.angularVelocity += transform.up * -angularAcceleration * Time.deltaTime;
+            rb.angularVelocity -= angularAcceleration * 2 * Time.deltaTime * transform.up;
         }
 
     }
