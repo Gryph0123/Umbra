@@ -26,7 +26,7 @@ public class liftScript : MonoBehaviour
         rb.velocity += attackCoefficent * Mathf.Pow(rb.velocity.magnitude, 2) * (liftCoefficent / rb.mass) * transform.up * Time.deltaTime;
 
         // Shifts velocity towards heading
-        rb.velocity += (transform.forward * rb.velocity.magnitude - rb.velocity) * handling * Time.deltaTime;
+        rb.velocity += (transform.forward.normalized * rb.velocity.magnitude - rb.velocity) * handling * Time.deltaTime;
 
 
 
